@@ -260,7 +260,7 @@ orderForm.addEventListener("submit", async function (e) {
 
 
         const response = await fetch(
-            "https://script.google.com/macros/s/AKfycbxuN-vUrXJFW5z9Ntis9Czf1TbJ9KDYTPPEPN-SWsYe9VmGqzF5TOGB--7jRzP837pWrA/exec",
+            "https://script.google.com/macros/s/AKfycbyUF4MY28AxJqZN4Od3INuoQPfNymMn0U4yE1v8lpTeYoDyvFRhkn4nl7lzZxaSAGQXlw/exec",
             {
                 method: "POST",
                 mode: "no-cors",
