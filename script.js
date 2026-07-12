@@ -322,4 +322,10 @@ Our team will contact you on WhatsApp shortly.`
     }
 
 
+
+function closeSuccessModal(){
+    document.getElementById(
+        "successModal"
+    ).style.display = "none";
+}
 });
