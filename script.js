@@ -236,7 +236,7 @@ orderForm.addEventListener("submit", async function (e) {
     try {
 
         await fetch(
-            "https://script.google.com/macros/s/AKfycbyUF4MY28AxJqZN4Od3INuoQPfNymMn0U4yE1v8lpTeYoDyvFRhkn4nl7lzZxaSAGQXlw/exec",
+            "https://script.google.com/macros/s/AKfycbyX0YbTlVonuFSCDRvKbj5eZwUxbu2lU52pmMA_4PsFw0g_oOBhYyhYPZTOT5Ll3MLcFA/exec",
             {
                 method: "POST",
                 mode: "no-cors",
