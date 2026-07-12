@@ -194,7 +194,8 @@ section h2{
 /* Form */
 
 .form-card{
-    max-width:850px;
+    min-width:100%;
+    max-width:100%;
     margin:auto;
     padding:50px;
     border-radius:30px;
