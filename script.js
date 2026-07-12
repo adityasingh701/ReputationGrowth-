@@ -152,10 +152,14 @@ function calculatePrice() {
     }
     
 
-    const total = quantity * rate;
+    let total = quantity * rate;
 
+if(discountPercent > 0){
+    total = total - ((total * discountPercent) / 100);
+}
 
-    totalPriceElement.innerText = `₹${total}`;
+totalPriceElement.innerText =
+`₹${Math.round(total)}`;
 }
 
 
@@ -350,4 +354,41 @@ function closeSuccessModal(){
         "successModal"
     ).style.display = "none";
 }
+
+    applyCouponBtn.addEventListener("click",()=>{
+
+    const code =
+        couponInput.value
+        .trim()
+        .toUpperCase();
+
+    if(couponApplied){
+        couponMessage.innerHTML =
+        "✅ Coupon already applied";
+        couponMessage.style.color="green";
+        return;
+    }
+
+    if(code === "SOMU20"){
+
+        discountPercent = 20;
+
+        couponApplied = true;
+
+        couponMessage.innerHTML =
+        "🎉 Code Applied Successfully! 20% Discount Activated";
+
+        couponMessage.style.color="green";
+
+        calculatePrice();
+    }
+
+    else{
+
+        couponMessage.innerHTML =
+        "❌ Invalid Coupon Code";
+
+        couponMessage.style.color="red";
+    }
+
 });
