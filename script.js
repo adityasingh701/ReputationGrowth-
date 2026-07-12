@@ -80,6 +80,10 @@ platformSelect.addEventListener("change", () => {
     }
 
 
+    if (platformSelect.value === "justdial") {
+    code = "JD";
+    }
+    
     orderIdInput.value = generateOrderId(code);
 
 
@@ -139,6 +143,14 @@ function calculatePrice() {
 
     }
 
+    if (platform === "justdial") {
+
+    if (wishType === "1") rate = 30;
+    if (wishType === "2") rate = 35;
+    if (wishType === "3") rate = 40;
+
+    }
+    
 
     const total = quantity * rate;
 
@@ -165,10 +177,19 @@ orderForm.addEventListener("submit", async function (e) {
     const notes = document.getElementById("notes").value.trim();
 
 
-    const platform =
-        platformSelect.value === "map"
-            ? "Google Maps"
-            : "5BestInCity";
+    let platform = "";
+
+if(platformSelect.value === "map"){
+    platform = "Google Maps";
+}
+
+if(platformSelect.value === "5best"){
+    platform = "5BestInCity";
+}
+
+if(platformSelect.value === "justdial"){
+    platform = "Justdial";
+}
 
 
     const wishType =
