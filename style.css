@@ -511,3 +511,27 @@ section h2{
     font-size:14px;
     font-weight:600;
 }
+
+.contact-btn{
+    padding:12px 26px;
+    border-radius:50px;
+    text-decoration:none;
+    color:white;
+    font-weight:600;
+    background:linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+    box-shadow:
+        0 8px 25px rgba(124,58,237,.25);
+    transition:.3s ease;
+}
+
+.contact-btn:hover{
+    transform:translateY(-3px);
+    box-shadow:
+        0 15px 35px rgba(124,58,237,.35);
+}
+
+
