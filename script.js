@@ -58,13 +58,13 @@ applyCouponBtn.addEventListener("click", () => {
         return;
     }
 
-    if (code === "SOMU7") {
+    if (code === "SOMU10") {
 
-        discountPercent = 20;
+        discountPercent = 10;
         couponApplied = true;
 
         couponMessage.innerHTML =
-            "🎉 SOMU7 Applied Successfully! 20% Discount Activated";
+            "🎉 Code Applied Successfully! 20% Discount Activated";
 
         couponMessage.style.color = "green";
 
@@ -226,6 +226,7 @@ orderForm.addEventListener("submit", async function (e) {
         language,
         notes,
         totalPrice,
+        couponCode,
         status: "New Lead",
         source: "Website"
     };
