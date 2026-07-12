@@ -153,6 +153,7 @@ section h2{
     margin-bottom:60px;
 }
 
+
 /* How It Works */
 
 .steps{
@@ -467,6 +468,32 @@ section h2{
     }
 
 }
+
+.hero-logo{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:40px 0 25px;
+}
+
+.hero-logo img{
+    width:160px;
+    max-width:40vw;
+    height:auto;
+    object-fit:contain;
+
+    filter:
+        drop-shadow(
+            0 12px 30px rgba(0,0,0,0.12)
+        );
+
+    transition:0.3s ease;
+}
+
+.hero-logo img:hover{
+    transform:scale(1.05);
+}
+
 
 
 .coupon-box{
