@@ -64,7 +64,7 @@ applyCouponBtn.addEventListener("click", () => {
         couponApplied = true;
 
         couponMessage.innerHTML =
-            "🎉 Code Applied Successfully! 20% Discount Activated";
+            "🎉 Code Applied Successfully! 10% Discount Activated";
 
         couponMessage.style.color = "green";
 
@@ -140,23 +140,23 @@ function calculatePrice() {
 
     // Google Maps
     if (platform === "map") {
-        if (wishType === "1") rate = 25;
-        if (wishType === "2") rate = 30;
-        if (wishType === "3") rate = 35;
+        if (wishType === "1") rate = 30;
+        if (wishType === "2") rate = 35;
+        
     }
 
     // 5BestInCity
     if (platform === "5best") {
         if (wishType === "1") rate = 20;
         if (wishType === "2") rate = 25;
-        if (wishType === "3") rate = 30;
+        
     }
 
     // Justdial
     if (platform === "justdial") {
         if (wishType === "1") rate = 30;
         if (wishType === "2") rate = 35;
-        if (wishType === "3") rate = 40;
+        
     }
 
     let total = quantity * rate;
@@ -189,8 +189,8 @@ orderForm.addEventListener("submit", async function (e) {
         wishTypeSelect.value === "1"
             ? "1 Line"
             : wishTypeSelect.value === "2"
-            ? "2 Line"
-            : "3 Line";
+            ? "2 Line";
+    
 
     const quantity =
         quantitySelect.value === "custom"
