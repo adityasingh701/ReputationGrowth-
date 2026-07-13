@@ -248,36 +248,51 @@ orderForm.addEventListener("submit", async function (e) {
 
         const now = new Date();
 
-const orderDate = now.toLocaleDateString("en-IN", {
-    day: "2-digit",
-    month: "long",
-    year: "numeric"
-});
+const orderDate =
+    now.toLocaleDateString(
+        "en-GB",
+        {
+            day:"numeric",
+            month:"long",
+            year:"numeric"
+        }
+    );
 
-const orderTime = now.toLocaleTimeString("en-IN", {
-    hour: "2-digit",
-    minute: "2-digit",
-    second: "2-digit"
-});
+const orderTime =
+    now.toLocaleTimeString(
+        "en-US",
+        {
+            hour:"2-digit",
+            minute:"2-digit",
+            second:"2-digit"
+        }
+    );
 
 document.getElementById(
     "successDetails"
 ).innerHTML = `
-    <b>🆔Order ID:</b> ${formData.orderId}<br>
-    <b>📅Order Date:</b> ${orderDate}<br>
-    <b>⏰Order Time:</b> ${orderTime}<br>
-    <b>🌐Platform:</b> ${platform}<br>
-    <b>📦Quantity:</b> ${quantity}<br>
-    <b>💬Wish Type:</b> ${wishType}<br>
-    <b>💰Total Amount:</b> ${totalPrice}<br><br>
 
-    Our team will contact you on WhatsApp shortly.
+📛 <b>Order ID:</b> ${formData.orderId}<br>
+
+📅 <b>Order Date:</b> ${orderDate}<br>
+
+⏰ <b>Order Time:</b> ${orderTime}<br>
+
+🌐 <b>Platform:</b> ${platform}<br>
+
+📦 <b>Quantity:</b> ${quantity}<br>
+
+💬 <b>Wish Type:</b> ${wishType}<br>
+
+💰 <b>Total Amount:</b> ${totalPrice}
+
 `;
 
-        document.getElementById(
-            "successModal"
-        ).style.display = "flex";
+document.getElementById(
+    "successModal"
+).style.display="flex";
 
+        
         orderForm.reset();
 
         totalPriceElement.innerText = "₹0";
